@@ -1,25 +1,34 @@
 abstract class Ex {
-	abstract void execute();
+  abstract void execute();
 }
 
 class Ex1_0 extends Ex {
-	void execute(){
-		System.out.println("Hello World!");
-	}
+  void execute(){
+    System.out.println("Hello World!");
+  }
 }
 
+class Ex1_3 extends Ex {
+  void execute(){
+    System.out.println("前\n田\n\n隼\n希");
+  }  
+} 
+
+
 class Ex1_2 extends Ex {
-	void execute(){
-		System.out.println("山\n内\n公\n之");
-	}
+  void execute(){
+    System.out.println("前\n田\n隼\n希\n");
+  }
 }
 
 public class Ex1 {
-	public static void main(String[] args){
-		Ex a;
-		a = new Ex1_0();
-		a.execute();
-		a = new Ex1_2();
-		a.execute();
-	}
+  public static void main(String[] args){
+    Ex a;
+    a = new Ex1_0();
+    a.execute();
+    a = new Ex1_2();
+    a.execute();
+    a = new Ex1_3();
+    a.execute();   
+  }
 }
