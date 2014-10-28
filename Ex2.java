@@ -5,7 +5,7 @@ abstract class Ex {
 	abstract void execute();
 }
 
-class Ex2_0 extends Ex{
+class Ex2_1 extends Ex{
 	void execute(){
 		double x;
 		double y;
@@ -20,7 +20,7 @@ class Ex2_0 extends Ex{
 		System.out.println("平均は" + (x + y) / 2 + "です。");
 	}
 }
-class Ex2_1 extends Ex{
+class Ex2_2 extends Ex{
 	void execute(){
 		int x;
 		int y;
@@ -75,10 +75,12 @@ public class Ex2 {
 /*
 		a = new Ex2_0();
 		a = new Ex2_00();
-*/
 		a = new Ex2_000();
 		a.execute();
+*/
                 a = new Ex2_1();
+                a.execute();
+                a = new Ex2_2();
                 a.execute();
 	}
 }
