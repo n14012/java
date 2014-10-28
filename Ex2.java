@@ -38,7 +38,7 @@ class Ex2_2 extends Ex{
 		System.out.println("平均は" + (x + y + z) / 3 + "です。");
 	}
 }
-
+/*
 class Ex2_00 extends Ex{
 	void execute(){
 		Scanner stdIn = new Scanner(System.in);
@@ -59,7 +59,64 @@ class Ex2_00 extends Ex{
 	}
 }
 
-class Ex2_000 extends Ex{
+*/
+class Ex2_3 extends Ex{
+	void execute(){
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.println("キーボードから読み込んだ整数値をそのまま反復して表示します。");
+
+		System.out.print("xの値:");
+		int x = stdIn.nextInt();
+		
+		System.out.println(x); // x の値を表示
+		System.out.println(x); // x の値を再び表示
+                }
+}
+class Ex2_4 extends Ex{
+	void execute(){
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.println("キーボードから読み込んだ整数値に10を加えた値と10を減じた値を出力します。");
+
+		System.out.print("xの値:");
+		int x = stdIn.nextInt();
+		
+		System.out.println(x + 10);
+                System.out.println(x - 10);
+        }
+}
+
+class Ex2_5 extends Ex{
+	void execute(){
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.println("2つの実数値を読み込み、その和と平均を求めて表示します。");
+
+		System.out.print("xの値:");
+                int x = stdIn.nextInt();
+		System.out.print("yの値:");
+                int y = stdIn.nextInt(); 
+		
+		System.out.println(x+y);
+                System.out.println((x+y)/2);
+        }
+}
+class Ex2_6 extends Ex{
+	void execute(){
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.println("三角形の底辺と高さを実数値で読み込んで、その面積を表示します。");
+
+		System.out.print("底辺の値:");
+                int x = stdIn.nextInt();
+		System.out.print("高さの値:");
+                int y = stdIn.nextInt(); 
+		
+		System.out.println((x*y)/2 );
+        }
+}
+class Ex2_7 extends Ex{
 	void execute(){
 		Random rand = new Random();
 
@@ -82,5 +139,13 @@ public class Ex2 {
                 a.execute();
                 a = new Ex2_2();
                 a.execute();
+                a = new Ex2_3();
+                a.execute(); 
+                a = new Ex2_4();
+                a.execute(); 
+                a = new Ex2_5();
+                a.execute(); 
+                a = new Ex2_6();
+                a.execute(); 
 	}
 }
