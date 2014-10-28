@@ -94,9 +94,9 @@ class Ex2_5 extends Ex{
 		System.out.println("2つの実数値を読み込み、その和と平均を求めて表示します。");
 
 		System.out.print("xの値:");
-                int x = stdIn.nextInt();
+                double x = stdIn.nextDouble();
 		System.out.print("yの値:");
-                int y = stdIn.nextInt(); 
+                double y = stdIn.nextDouble(); 
 		
 		System.out.println(x+y);
                 System.out.println((x+y)/2);
@@ -109,9 +109,9 @@ class Ex2_6 extends Ex{
 		System.out.println("三角形の底辺と高さを実数値で読み込んで、その面積を表示します。");
 
 		System.out.print("底辺の値:");
-                int x = stdIn.nextInt();
+                double x = stdIn.nextDouble();
 		System.out.print("高さの値:");
-                int y = stdIn.nextInt(); 
+                double y = stdIn.nextDouble(); 
 		
 		System.out.println((x*y)/2 );
         }
@@ -120,12 +120,33 @@ class Ex2_7 extends Ex{
 	void execute(){
 		Random rand = new Random();
 
-		int luchy = rand.nextInt(10);		// 0～9の乱数
+		int luchy = rand.nextInt(9)+1;		// 0～9の乱数
+                System.out.println("1桁の正の整数値をランダムに表示" ); 
+		System.out.println(luchy);
 
-		System.out.println("今日のラッキーナンバーは" + luchy + "です。");
+                int happy = rand.nextInt(9)-9;
+                System.out.println("1桁の負の整数値をランダムに表示");
+                System.out.println(happy); 
+
+                int rarery  = rand.nextInt(90)+10;
+                System.out.println("2桁の正の整数値をランダムに表示");
+                System.out.println(rarery); 
+
 	}
 }
 
+class Ex2_8 extends Ex{
+  void execute(){
+    Scanner stdIn = new Scanner(System.in);
+    System.out.println("キーボードから読み込んだ整数値プラスマイナス５の範囲の整数値をランダムで表示します。");
+      Random rand = new Random();
+    System.out.print("xの値");
+    int x = stdIn.nextInt();
+    int y = rand.nextInt(11)-5;
+    int range = (x+y); 
+    System.out.println(range); 
+  }  
+} 
 public class Ex2 {
 	public static void main(String[] args){
 		Ex a;
@@ -146,6 +167,10 @@ public class Ex2 {
                 a = new Ex2_5();
                 a.execute(); 
                 a = new Ex2_6();
+                a.execute(); 
+                a = new Ex2_7();
+                a.execute(); 
+                a = new Ex2_8();
                 a.execute(); 
 	}
 }
