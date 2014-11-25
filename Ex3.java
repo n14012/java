@@ -2,10 +2,10 @@ class Ex3{
 
 	public String ex3_0(int n){
 
-          if(n>0){
+          if(n > 0){
             return "その値は正です"; 
           }else{
-            return "その値は0か負です";
+            return "その値は０か負です";
           }
 
 	}
@@ -32,9 +32,9 @@ class Ex3{
 
 	public String ex3_3(int a, int b){
           if (a < b){
-            return "bの方が大きいです";
+            return b + "の方が大きいです";
           }else if(a > b){
-            return "aの方が大きいです";
+            return  a + "の方が大きいです";
           }else{
             return "同じ値です";
           } 
@@ -42,10 +42,10 @@ class Ex3{
 	}
 
 	public String ex3_4(int a){
-          if (a % 5 == 0){
-            return "その値は5で割り切れます"; 
-          }else if (a < 0){
-            return "正でない整数値です";  
+          if (a < 0){
+            return "正でない整数値です"; 
+          }else if (a % 5 == 0){
+            return "その値は5で割り切れます";  
           }else{
             return "その値は5で割り切れません"; 
           }
@@ -75,16 +75,16 @@ class Ex3{
 	}
 
 	public String ex3_7(int a){
-          if (a > 0 && a < 60){
-            return "不可"; 
-          }else if (a > 59 && a < 70){
-            return "可"; 
-          }else if (a > 69 && a < 80){
-            return "良";
-          }else if (a > 79 && a < 101){
-            return "優良"; 
+          if (a < 0 || a > 100){
+            return ("範囲(0～100)外の値です"); 
+          }else if (a >= 80 && a <= 100){
+            return ("優"); 
+          }else if (a >= 70 && a <= 79){
+            return ("良");
+          }else if (a >= 60 && a <= 69){
+            return ("可"); 
           }else {
-            return "範囲(0〜100)外の値です"; 
+            return ("不可"); 
           }
         } 
 
